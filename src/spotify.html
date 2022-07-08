@@ -5,14 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <title>spotify</title>
   </head>
   <body>
     <div id="root">
-      <sidebar class="sidebar"> </sidebar>
+      <sidebar class="sidebar">
+        <div class="dots-sidebar">
+          <div class="single-dot-sidebar"></div>
+          <div class="single-dot-sidebar"></div>
+          <div class="single-dot-sidebar"></div>
+        </div>
+
+        <div class="sidebar-options home">
+          <img
+            src="/src/images/transparent-home-icon-house-icon-5d6f15d91c98f1.3250379215675611771171.png"
+            alt="home"
+          />
+          Home
+        </div>
+        <div class="sidebar-options">
+          <img src="/src/images/icona-lente.png" alt="lente" />
+          Cerca
+        </div>
+
+        <div class="sidebar-options">
+          <img
+            src="/src/images/library_book_icon_180386.png"
+            alt="la tua libreria"
+          />
+          La tua libreria
+        </div>
+
+        <div class="separation"></div>
+
+        <div class="sidebar-options">
+          <img src="/src/images/plus.png" alt="crea playlist" />
+          Crea playlist
+        </div>
+
+        <div class="sidebar-options">
+          <img
+            src="/src/images/brani_che_ti_piacciono.png"
+            alt="la tua libreria"
+          />
+          Brani che ti piacciono
+        </div>
+
+        <div class="sidebar-options">
+          <img src="/src/images/linguetta_verde.png" alt="la tua libreria" />
+          I tuoi episodi
+        </div>
+
+        <div class="separation"></div>
+        <hr>
+        <div class="separation"></div>
+        
+
+        <div class="sidebar-options">Superbowl 2022</div>
+        <div class="sidebar-options">Sanremo 2022</div>
+        <div class="sidebar-options">Come nelle canzoni Radio</div>
+        <div class="sidebar-options">Senza dubbio Radio</div>
+        <div class="sidebar-options">I tuoi brani preferiti del 2021</div>
+        <div class="sidebar-options">strappare lungo i bordi</div>
+        <div class="sidebar-options">Il mio Daily</div>
+
+        <div class="sidebar-options">Training Indie</div>
+        <div class="sidebar-options">Lavora col sorriso</div>
+      </sidebar>
       <main class="main-content">
         <div class="mega-componente">
-          <div class="buttonLeftRight"></div>
+          <div class="top">
+            <div class="buttonLeftRight">
+              <div class="left">
+                <img
+                  src="/src//images/previous_arrow_left_icon_141950.png"
+                  alt="left"
+                />
+              </div>
+              <div class="right">
+                <img
+                  src="/src/images/next_arrow_right_icon_141948.png"
+                  alt="left"
+                />
+              </div>
+            </div>
+            <div class="profile">
+              <img src="/src/images/io.png" alt="me" />
+              Giulio Mariani
+              <div class="triangle"></div>
+            </div>
+          </div>
           <div class="main-stage">
             <img
               src="/src/images/Immagine 2022-07-05 175311.png"
@@ -30,6 +113,12 @@
                 <button class="play">Play</button>
 
                 <button class="segui">Segui</button>
+
+                <div class="dots">
+                  <div class="single-dot"></div>
+                  <div class="single-dot"></div>
+                  <div class="single-dot"></div>
+                </div>
               </div>
             </div>
             <div class="annuncio">
@@ -37,6 +126,7 @@
             </div>
           </div>
           <p class="buon-pomeriggio">Buon pomeriggio</p>
+
           <div class="scelti-per-me">
             <div class="singolo-box">
               <img
@@ -67,9 +157,51 @@
               <div class="scritta-box">Discovery Weekly</div>
             </div>
           </div>
+
+          <p class="popolare">Popolare tra chi ascolta: TEDx Talks Italia</p>
+
+          <div class="middle-stage">
+            <div class="podcast">
+              <img src="/src/images/economia.png" alt="economia" />
+              <div class="titolo-podcast">Economia a Polpette</div>
+              <div class="description-podcast">4tracce.fm by GOODmood</div>
+            </div>
+            <div class="podcast">
+              <img src="/src/images/senza_maschere.png" alt="senza maschere" />
+              <div class="titolo-podcast">Senza Maschere</div>
+              <div class="description-podcast">Alessandro Sorace</div>
+            </div>
+            <div class="podcast">
+              <img src="/src/images/tlon.png" alt="TIon" />
+              <div class="titolo-podcast">Tlon - Il podcast</div>
+
+              <div class="description-podcast">Tlon-il podcast</div>
+            </div>
+            <div class="podcast">
+              <img src="/src/images/hacking.png" alt="hacking" />
+              <div class="titolo-podcast">Hacking Creativity</div>
+              <div class="description-podcast">Hacking Creativity</div>
+            </div>
+            <div class="podcast">
+              <img src="/src/images/lavori.png" alt="lavori" />
+              <div class="titolo-podcast">I lavori del futuro</div>
+
+              <div class="description-podcast">Il Sole 24 Ore</div>
+            </div>
+            <div class="podcast">
+              <img src="/src/images/books.png" alt="books" />
+              <div class="titolo-podcast">Books24 - I libri del S...</div>
+              <div class="description-podcast">Il Sole 24 Ore</div>
+            </div>
+          </div>
         </div>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="song">
+          <img src="/src/images/vertigo.png" alt="vertigo" />
+          Vertigo
+        </div>
+      </footer>
     </div>
   </body>
 </html>

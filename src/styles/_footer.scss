@@ -1,8 +1,21 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: $footerHeight;
-    background-color: $footerColor;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footerHeight;
+  background-color: $footerColor;
+  padding: 10px;
+  .song {
+    color: white;
+    font-family: $font;
+    width: 33%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      height: 100%;
+    }
   }
+}
