@@ -9,28 +9,26 @@
 
 ::-webkit-scrollbar {
   width: 20px;
-  
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.534); 
+  background: rgba(255, 255, 255, 0.534);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white; 
+  background: white;
 }
 
 #root {
-  
   background-color: rgb(17, 17, 85);
   width: 100%;
   height: 100vh;
@@ -57,56 +55,47 @@
 }
 
 .top {
-  
   display: flex;
   justify-content: space-between;
-padding-right: 15px;
-padding-top: 10px;
-padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-left: 15px;
   .profile {
-    
     color: white;
     font-family: $font;
-   
+
     display: flex;
     align-items: center;
-    
-    gap:10px;
+
+    gap: 10px;
     background-color: rgba(49, 48, 48, 0.582);
-  
-   
+
     border-radius: 130px;
     width: 200px;
     height: 50px;
-    
-    img{
+
+    img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
     }
 
-    .triangle{
-      
-        width: 0px;
-        height: 0px;
-        line-height: 0px;
-        border-top: 8px solid white;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        
+    .triangle {
+      width: 0px;
+      height: 0px;
+      line-height: 0px;
+      border-top: 8px solid white;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
     }
 
     &:hover {
-      cursor:pointer;
+      cursor: pointer;
     }
   }
-
 }
 
 .buttonLeftRight {
-  
- 
-  
   display: flex;
   gap: 15px;
 
@@ -154,6 +143,7 @@ padding-left: 15px;
   // flex-direction: row;
   justify-content: flex-start;
   background-image: linear-gradient(to top right, black, rgb(17, 17, 85) 80%);
+  
 }
 
 .immagine-latina {
@@ -270,8 +260,6 @@ button {
   color: white;
 }
 
-
-
 .scelti-per-me {
   width: 96%;
   height: 300px;
@@ -282,41 +270,6 @@ button {
   grid-template-areas: "singolo-box singolo-box singolo-box";
 
   gap: 18px;
-}
-
-@media screen and (max-width: 900px) {
-  .scelti-per-me {
-    width: 96%;
-    height: 300px;
-    margin: 2%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "singolo-box singolo-box singolo-box";
-
-    
-  }
-  .singolo-box {
-    background-color: rgba(49, 48, 48, 0.582);
-    border-radius: 10px;
-    display: flex;
-    flex-wrap:wrap;
-    align-items: center;
-    gap: 20px;
-    font-size: 25px;
-    font-family: $font;
-    color: white;
-
-    &:hover {
-      background-color: rgba(80, 78, 78, 0.582);
-      cursor: pointer;
-    }
-    img {
-      height: 130px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-    }
-  }
 }
 
 .singolo-box {
@@ -354,12 +307,9 @@ button {
   height: 400px;
   margin: 2%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-  
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-  grid-template-areas: 
-  "podcast podcast podcast podcast podcast podcast";
- 
+  grid-template-areas: "podcast podcast podcast podcast podcast podcast";
 
   gap: 18px;
 }
@@ -372,8 +322,8 @@ button {
   border-radius: 10px;
   justify-content: center;
   background-color: rgba(75, 75, 75, 0.181);
-gap: 20px;
-padding-bottom: 20px;
+  gap: 20px;
+  padding-bottom: 20px;
 
   &:hover {
     background-color: rgba(143, 142, 142, 0.181);
@@ -381,7 +331,7 @@ padding-bottom: 20px;
   img {
     width: 170px;
     height: 200px;
-    
+
     border-radius: 10px;
   }
 }
@@ -400,7 +350,6 @@ padding-bottom: 20px;
   color: grey;
   font-size: 15px;
   font-family: $font;
- 
 }
 
 .sidebar {
@@ -410,8 +359,11 @@ padding-bottom: 20px;
   padding-left: 30px;
 
   background-color: $sidebarColor;
-  width: $sidebarWidth;
+  max-width: $sidebarWidth;
   height: calc(100% - $footerHeight);
+  @media (max-width: $mobileL) {
+    max-width: 80px;
+  }
 }
 
 .dots-sidebar {
@@ -426,6 +378,9 @@ padding-bottom: 20px;
     .single-dot-sidebar {
       background-color: #fff;
     }
+    @media (max-width: $mobileL) {
+      display: none;
+    }
   }
 }
 
@@ -434,12 +389,15 @@ padding-bottom: 20px;
   height: 18px;
   border-radius: 50%;
   background-color: $footerColor;
+  @media (max-width: $mobileL) {
+    display: none;
+  }
 }
 
 .sidebar-options {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   gap: 15px;
   //border: 1px solid white;
   color: rgba(255, 255, 255, 0.395);
@@ -462,6 +420,20 @@ padding-bottom: 20px;
   }
 }
 
+.primary-sidebar {
+  @media (max-width: $mobileL) {
+    .sidebar-type {
+      display: none;
+    }
+  }
+}
+
+.secondary-sidebar {
+  @media (max-width: $tabletL) {
+    display: none;
+  }
+}
+
 .home {
   color: #fff;
   img {
@@ -479,11 +451,23 @@ padding-bottom: 20px;
   width: 240px;
 }
 
-.separation2{
+.separation2 {
   height: 2px;
   width: 300px;
 }
 
-hr{
+hr {
   width: 240px;
 }
+
+/*
+ riadatta sito per mobile
+ 
+   guarda cose che ti ha mandato matteo
+   
+
+$mobile: 375px;
+$mobileL: 425px;
+$tablet: 768px;
+$tabletL: 1024px;
+$desktop: 1480px; */

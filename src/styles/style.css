@@ -1,16 +1,18 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100px;
-  background-color: rgb(28, 27, 27);
+  background-color: rgb(24, 23, 23);
   padding: 10px;
 }
 .footer .song {
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  width: 33%;
   height: 95%;
   display: flex;
   align-items: center;
@@ -18,6 +20,17 @@
 }
 .footer .song img {
   height: 100%;
+}
+.footer .song .separation1 {
+  height: 5px;
+  border: none;
+}
+.footer .song .song-artist {
+  color: rgba(255, 255, 255, 0.395);
+}
+.footer .playing-song img {
+  width: 700px;
+  opacity: 0.8;
 }
 
 * {
@@ -65,7 +78,7 @@
 
 .mega-componente {
   height: 2000px;
-  background-image: linear-gradient(rgb(17, 17, 85), rgb(28, 27, 27));
+  background-image: linear-gradient(rgb(17, 17, 85), rgb(24, 23, 23));
   justify-content: flex-start;
   flex-wrap: wrap;
 }
@@ -198,7 +211,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: rgb(28, 27, 27);
+  background-color: rgb(24, 23, 23);
 }
 
 .play {
@@ -208,7 +221,7 @@
 .segui {
   background-color: black;
   color: white;
-  border: 2px solid rgb(28, 27, 27);
+  border: 2px solid rgb(24, 23, 23);
 }
 .segui:hover {
   border: 2px solid white;
@@ -269,38 +282,6 @@ button:hover {
   gap: 18px;
 }
 
-@media screen and (max-width: 900px) {
-  .scelti-per-me {
-    width: 96%;
-    height: 300px;
-    margin: 2%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "singolo-box singolo-box singolo-box";
-  }
-
-  .singolo-box {
-    background-color: rgba(49, 48, 48, 0.582);
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-    font-size: 25px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    color: white;
-  }
-  .singolo-box:hover {
-    background-color: rgba(80, 78, 78, 0.582);
-    cursor: pointer;
-  }
-  .singolo-box img {
-    height: 130px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-}
 .singolo-box {
   background-color: rgba(49, 48, 48, 0.582);
   border-radius: 10px;
@@ -381,8 +362,13 @@ button:hover {
   align-items: flex-start;
   padding-left: 30px;
   background-color: rgb(17, 17, 17);
-  width: 300px;
+  max-width: 300px;
   height: calc(100% - 100px);
+}
+@media (max-width: 425px) {
+  .sidebar {
+    max-width: 80px;
+  }
 }
 
 .dots-sidebar {
@@ -398,18 +384,27 @@ button:hover {
 .dots-sidebar:hover .single-dot-sidebar {
   background-color: #fff;
 }
+@media (max-width: 425px) {
+  .dots-sidebar:hover {
+    display: none;
+  }
+}
 
 .single-dot-sidebar {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: rgb(28, 27, 27);
+  background-color: rgb(24, 23, 23);
+}
+@media (max-width: 425px) {
+  .single-dot-sidebar {
+    display: none;
+  }
 }
 
 .sidebar-options {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 15px;
   color: rgba(255, 255, 255, 0.395);
   height: 50px;
@@ -428,6 +423,18 @@ button:hover {
 }
 .sidebar-options:hover img {
   opacity: 1;
+}
+
+@media (max-width: 425px) {
+  .primary-sidebar .sidebar-type {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .secondary-sidebar {
+    display: none;
+  }
 }
 
 .home {
@@ -454,4 +461,16 @@ button:hover {
 
 hr {
   width: 240px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*
+ riadatta sito per mobile
+
+   guarda cose che ti ha mandato matteo
+
+
+$mobile: 375px;
+$mobileL: 425px;
+$tablet: 768px;
+$tabletL: 1024px;
+$desktop: 1480px; *//*# sourceMappingURL=style.css.map */

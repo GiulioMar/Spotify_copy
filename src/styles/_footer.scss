@@ -1,4 +1,7 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -9,13 +12,28 @@
   .song {
     color: white;
     font-family: $font;
-    width: 33%;
+    //width: 33%;
     height: 95%;
     display: flex;
     align-items: center;
+
     gap: 20px;
     img {
       height: 100%;
+    }
+    .separation1 {
+      height: 5px;
+      border: none;
+    }
+    .song-artist {
+      color: rgba(255, 255, 255, 0.395);
+    }
+  }
+
+  .playing-song {
+    img {
+      width: 700px;
+      opacity: 0.8;
     }
   }
 }
